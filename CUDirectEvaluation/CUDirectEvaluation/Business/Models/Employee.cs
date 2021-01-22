@@ -14,7 +14,7 @@ namespace CUDirectEvaluation.Business.Models
         public string Address { get; set; }
         public string Role { get; set; }
         public string Department { get; set; }
-        public List<string> Skillsets { get; set; }
+        public string Skillsets { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DateTime DateOfJoining { get; set; }
         public bool IsActive { get; set; }

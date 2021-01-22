@@ -54,6 +54,10 @@ define(['./Controls/Controls.js'], function (controls) {
         BindEmployeeModel: function (model, callback) {
             Apps.Bind.DataBindControls(model, 'EmployeeModel', Me.Controls);
 
+            //TODO: Binding auto-populates when model is filled, find a way to opt-out 
+            $('#Company_Employee_Name_Textbox').val('');
+            $('#Company_Employee_Address_Textbox').val('');
+
             if(callback)
                 callback();
         },
@@ -85,6 +89,7 @@ define(['./Controls/Controls.js'], function (controls) {
 
                     Me.BindEmployeeModel(result.Data[0]);
                     $('#Company_Employees_EmployeeDetail_Div').show(400);
+
                 }
 
             });

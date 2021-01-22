@@ -38,14 +38,19 @@ namespace CUDirectEvaluation.Controllers
 
             try
             {
-                using (var db = new LiteDatabase(dbPath))
-                {
-                    var objs = db.GetCollection<Employee>("Employees");
+                //using (var db = new LiteDatabase(dbPath))
+                //{
+                //    var objs = db.GetCollection<Employee>("Employees");
 
-                    result.Data = objs.FindAll().ToList();
+                //    result.Data = objs.FindAll().ToList();
+                //    result.Success = true;
+                //}
+
+                using(var db = new Data())
+                {
+                    result.Data = db.Employees.ToList();
                     result.Success = true;
                 }
-
             }
             catch (Exception ex)
             {
@@ -63,14 +68,19 @@ namespace CUDirectEvaluation.Controllers
 
             try
             {
-                using (var db = new LiteDatabase(dbPath))
-                {
-                    var objs = db.GetCollection<Employee>("Employees");
+                //using (var db = new LiteDatabase(dbPath))
+                //{
+                //    var objs = db.GetCollection<Employee>("Employees");
 
-                    result.Data = objs.FindAll().Where(e => e.ID == id).ToList();
+                //    result.Data = objs.FindAll().Where(e => e.ID == id).ToList();
+                //    result.Success = true;
+                //}
+
+                using(var db = new Data())
+                {
+                    result.Data = db.Employees.Where(e => e.ID == id).ToList();
                     result.Success = true;
                 }
-
             }
             catch (Exception ex)
             {
@@ -89,16 +99,22 @@ namespace CUDirectEvaluation.Controllers
 
             try
             {
-                using (var dblocal = new LiteDatabase(dbPath))
+                //using (var dblocal = new LiteDatabase(dbPath))
+                //{
+
+                //    var objs = dblocal.GetCollection<Employee>("Employees");
+                //    objs.Upsert(employee);
+
+                //    result.Data = objs.FindAll().ToList();
+                //    result.Success = true;
+                //}
+
+                using(var db = new Data())
                 {
-
-                    var objs = dblocal.GetCollection<Employee>("Employees");
-                    objs.Upsert(employee);
-
-                    result.Data = objs.FindAll().ToList();
+                    db.Employees.Add(employee);
+                    db.SaveChanges();
                     result.Success = true;
                 }
-
             }
             catch (Exception ex)
             {
