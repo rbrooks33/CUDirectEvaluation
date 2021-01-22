@@ -1,0 +1,39 @@
+.TestingContentStyle {
+    background-color: azure;
+    padding: 20px;
+    width: 435px;
+    max-height: 500px;
+    border-radius: 5px;
+    border: 2px solid #337ab7;
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:9999;
+    overflow:hidden;
+}
+.TestingCloseStyle {
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: -16px;
+    font-size: 22px;
+    left: 41px;
+}
+.TestingMinimizeStyle {
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: -38px;
+    font-size: 45px;
+    left: -11px;
+}
+.TestingMaximizeStyle {
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+    top: -19px;
+    float: right;
+    width:30px;
+    height:30px;
+}

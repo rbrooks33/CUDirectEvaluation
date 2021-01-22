@@ -3,3 +3,8 @@
 ################################################################################
 
 /CUDirectEvaluation/CUDirectEvaluation/bin/Debug/net5.0
+/CUDirectEvaluation/.vs/CUDirectEvaluation
+/.vs
+/CUDirectEvaluation/CUDirectEvaluation/obj
+/CUDirectEvaluation/CUDirectEvaluationTest/bin/Debug/netcoreapp3.1
+/CUDirectEvaluation/CUDirectEvaluationTest/obj

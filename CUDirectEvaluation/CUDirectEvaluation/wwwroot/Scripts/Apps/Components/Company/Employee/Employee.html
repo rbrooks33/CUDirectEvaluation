@@ -1,0 +1,79 @@
+<div class="Company_Employee_Container_Style">
+    <h1>Company Employees</h1>
+    
+    <div style="margin:20px;">
+        <h3>Get Employee</h3>
+        <select id="Company_Employee_Employee_Select" class="form-control"></select>
+        <div id="Company_Employees_EmployeeDetail_Div"></div>
+    </div>
+
+    <div style="margin:20px;">
+        <h3>Create Employee</h3>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="Company_Employee_Name_Textbox" class="form-control"
+                           data-bind-type="EmployeeModel" data-bind-property="Name"/></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" id="Company_Employee_Address_Textbox" class="form-control"
+                           data-bind-type="EmployeeModel" data-bind-property="Address"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div class="btn btn-primary" style="margin-top:10px;" onclick="Apps.Components.Company.Employee.Create();">Create</div>
+                    <div class="btn btn-primary" style="margin-top:10px;" onclick="Apps.Components.Company.Employee.Test();">Test</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script id="Company_Employee_EmployeeInfo_Template" type="text/template">
+
+    <div style="margin-top:15px;">
+        <h4>Employee Info</h4>
+        <div style="padding: 20px; border: 1px solid lightgray; border-radius: 5px; margin-top: 5px;">
+
+            <table>
+                <tr>
+                    <td>ID</td>
+                    <td><span data-bind-type="EmployeeModel" data-bind-property="ID"></span></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><span data-bind-type="EmployeeModel" data-bind-property="Name"></span></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><span data-bind-type="EmployeeModel" data-bind-property="Address"></span></td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td><span data-bind-type="EmployeeModel" data-bind-property="Role"></span></td>
+                </tr>
+                <tr>
+                    <td>Department</td>
+                    <td><span data-bind-type="EmployeeModel" data-bind-property="Department"></span></td>
+                </tr>
+                <tr>
+                    <td>Skillsets</td>
+                    <td><span data-bind-type="EmployeeModel" data-bind-property="Skillsets"></span></td>
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td><span data-bind-type="EmployeeModel" data-bind-property="DateOfBirth"></span></td>
+                </tr>
+                <tr>
+                    <td>Date Of Hire</td>
+                    <td><span data-bind-type="EmployeeModel" data-bind-property="DateOfJoining"></span></td>
+                </tr>
+                <tr>
+                    <td>Is Active</td>
+                    <td><span data-bind-type="EmployeeModel" data-bind-property="IsActive"></span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</script>
